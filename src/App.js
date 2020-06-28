@@ -1,26 +1,27 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useEffect, useState } from 'react';
+import './App.css'
 function App() {
+  const [repos, setRepos] = useState([{}]);
+  useEffect(() => {
+
+    async function getRespos() {
+      const response = await fetch("https://api.github.com/users/Subhankhalid1/repos");
+      const data = await response.json();
+      console.log("Data", data)
+      setRepos(data);
+    }
+    getRespos();
+  
+  }, [])
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <ul>
+        
+        {repos.map((obj, ind) => {
+          return (<li key={ind}>{obj.name}</li>)
+        })}
+      </ul>
     </div>
   );
 }
-
 export default App;
