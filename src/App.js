@@ -1,27 +1,30 @@
-import React, { useEffect, useState } from 'react';
+// import React, { useEffect, useState } from 'react';
+import React from 'react';
+// import ControlledCarousel from './Slider'
+// import Carousel from 'react-bootstrap/Carousel';
 import './App.css'
-function App() {
-  const [repos, setRepos] = useState([{}]);
-  useEffect(() => {
 
-    async function getRespos() {
-      const response = await fetch("https://api.github.com/users/Subhankhalid1/repos");
-      const data = await response.json();
-      console.log("Data", data)
-      setRepos(data);
-    }
-    getRespos();
+//import components
+import Header from './components/Header';
+import MainGrid from './components/MainGrid';
+import Footer from './components/Footer';
+// import Slider from './Slider'
+
+function App() {
   
-  }, [])
+ 
   return (
-    <div>
-      <ul>
-        
-        {repos.map((obj, ind) => {
-          return (<li key={ind}>{obj.name}</li>)
-        })}
-      </ul>
+    <div className="">
+     
+<Header/>
+
+<div>
+
+<MainGrid/>
     </div>
+    
+    <Footer />
+  </div>
   );
 }
 export default App;

@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  
 }
 
 .App-logo {
@@ -12,7 +13,10 @@
     animation: App-logo-spin infinite 20s linear;
   }
 }
-
+/* .main{
+  background-image: url(1st.png);
+  background-size: cover;
+} */
 .App-header {
   background-color: #282c34;
   min-height: 100vh;
@@ -35,4 +39,49 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+
+
+
+
+
+
+
+@keyframes myanimation {
+  0% {
+      transform: scale(1, 1);
+      background-color: orange;
+  }
+
+  45% {
+      transform: scale(2, 1);
+      background-color: green;
+  }
+
+  65% {
+      transform: scale(3, 1);
+      background-color: blue;
+
+  }
+
+  100% {
+      transform: scale(4, 1);
+      background-color: red;
+  }
+}
+
+.my {
+  display: fixed;
+  height: 45px;
+  width: 25vw;
+  animation-name: myanimation;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  background-color: white;
+  margin-left: 37%;
+  animation-duration: 4s;
+  animation-delay: 8s;
+  text-align: center;
+  color: white;
 }
