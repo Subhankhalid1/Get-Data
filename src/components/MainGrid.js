@@ -6,8 +6,8 @@ import Grid from '@material-ui/core/Grid';
 //import GlobalData_Grid of component
 import GlobalData from './GlobalData';
 import CountryData from './countryData';
-import Slider from './Slider';
-import Chart from './Chart'; 
+// import Slider from './Slider';
+// import Chart from './Chart'; 
 
 
 const useStyles = makeStyles((theme) => ({
@@ -29,25 +29,24 @@ export default function MainGrid() {
 
   return (
     <div className={classes.root}>
-      <Grid container spacing={3}>
+      <Grid container spacing={12}>
           
-        <Grid item xs={4}>
+        <Grid item xs={12}>
             
           <Paper className={classes.paper}>
               Global Data as of Today
               <GlobalData/>
               </Paper>
         </Grid>
-        <Grid item xs={8}>
+        <Grid item xs={12}>
         
           <Paper className={classes.paper}> Please select a country
           <CountryData />
           
           </Paper>
-          <Chart/>
+          
         </Grid>
-        <Slider/>
-        
+       
         </Grid>
    
     </div>

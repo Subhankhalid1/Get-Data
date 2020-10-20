@@ -6,11 +6,11 @@ import NumberFormat from 'react-number-format';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        display: 'fixed',
+        display: 'relative',
         '& > *': {
-            margin: theme.spacing(2),
+            margin: theme.spacing(1),
             width: '100%',
-            height: theme.spacing(16),
+            height: theme.spacing(17.2),
 
         },
     },

@@ -14,7 +14,7 @@ const useStyles = makeStyles((theme) => ({
         '& > *': {
 
             width: '100%',
-            height: theme.spacing(26),
+            height: theme.spacing(20),
         },
 
     },
@@ -28,26 +28,12 @@ export default function Footer() {
 
     return (
         <div className={classes.root} >
-            <AppBar position="static">
+            <AppBar position="flex">
                 <Toolbar variant="dense" >
-                    {/* <IconButton edge="start" className={classes.menuButton} color="inherit" aria-label="menu">
-            <MenuIcon />
-          </IconButton>
-          <Typography variant="h6" color="inherit">
-            Photos
-          </Typography> */}
+               
                     <Typography variant="h6" color="inherit" >
-                        Contact Us:
-          <div style={{ color: "black", marginTop: '2%' }}>
-                            If you have any questions or issues about this Application, please contact us:
-                  
-                  Tweet us over at  TheVirusTracker
-                  
-                  Wiki - by  TheVirusTracker -  TheVirusTracker Facebook - Build a Tracker - Privacy Policy - Terms of Service
-                  StatCounter - Free Web Tracker and Counter
-</div>
-                        <hr />
-                        <div style={{ color: "white", marginLeft: '30%', marginTop: '0%' }}>
+              
+                        <div style={{ color: "white", marginLeft: '0%', marginTop: '0%', }}>
                             Copyright © 2020 Rana Subhan, LLC dba Autobots ®
 </div>
                     </Typography>
